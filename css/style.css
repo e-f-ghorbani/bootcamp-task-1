@@ -1,0 +1,198 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+    --color-heading: rgb(30, 30, 30);
+    --color-item-number:rgb(175, 206, 221);
+    --color-item-title:rgb(35, 72, 148);
+    --color-item-caption:rgb(105, 105, 105);
+    --color-btn:rgb(33, 159, 149);
+}
+
+body,
+* {
+  font-family: Vazirmatn;
+  background-color: var(--color-secondary-100);
+}
+
+
+h1,h2,h3{
+    font-size: 2rem;
+    font-family:Vazirmatn ;
+    font-weight: 900;
+    color: var(--color-heading);
+}
+/* ------------------------------------ */
+.title{
+    padding: 1.5rem 2.5rem;
+}
+
+@media screen and (max-width:320px) {
+ 
+
+}
+/* ---------card------------ */
+.app {
+    display: grid; 
+    /* grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem; */
+    
+}
+.container{
+    margin: 0 2rem;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.card-item{
+    display: flex;
+    align-items: center;
+}
+.card .card-item .card-item__number{
+    background-color: var(--color-item-number);
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+}
+.card .card-item .card-item__title{
+    font-size: 1rem;
+    color: var(--color-item-title);
+    padding-right:0.5rem;
+}
+.card-item__date{
+    font-size: 0.5rem;
+    color: var(--color-item-caption);
+}
+
+
+/* caption */
+.caption{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 0 0;
+}
+.caption .caption-title{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-heading);
+}
+.caption .caption-description{
+    font-size: 0.6rem;
+    color: var(--color-item-caption);
+}
+
+
+/* personal */
+.personal ,.personal-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.personal-detail{
+    padding:1rem 1.5rem 0 0;
+    
+}
+.personal-detail .personal-detail__image img{
+    width: 40px;
+    height:40px;
+    border-radius: 0.8rem;  
+}
+.personal .personal-detail .personal-detail__name{
+    font-size: 1rem;
+    font-weight: bolder;
+    padding-right: 0.5rem;   
+}
+.personal .btn{
+   width: 8rem;
+   background-color:var(--color-btn);
+   color: #fff;
+   font-size:0.8rem ;
+   font-weight: 500;
+   border: none;
+   border-radius:0.5rem ;
+   margin-left: 1.5rem;
+   padding: 1rem 0;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width:425px) {
+     
+    .title{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    }
+    h2{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .app{
+     grid-template-columns: 1fr;
+     gap: 1rem;
+    }
+    .card{
+     padding: 1rem 1rem 0 1rem;
+    }
+     .card-item .card-item__number{
+         padding: 0.5rem;
+     }
+     .card-item .card-item__title,
+     .caption .caption-title{
+         font-size: 0.8rem;
+     }
+     .personal-detail .personal-detail__image img{
+         width: 30px;
+         height:30px;
+     }
+     .personal .personal-detail .personal-detail__name{
+         font-size: 0.8rem;
+         font-weight: bolder;
+     }
+     .personal .btn{
+         width:5rem;
+         font-size: 0.5rem;
+         margin-left: 0.8rem;
+         padding: 0.5rem 0;
+     }
+ }
+ 
+ @media screen and (min-width:768px) {
+    h2{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+     .app{
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+     }
+     .personal .personal-detail .personal-detail__name {
+        font-size: 0.8rem;
+    }
+}
+    @media screen and (min-width:1024px) {
+        h2{
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        .app{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        }
+        .personal .personal-detail .personal-detail__name {
+            font-size: 1rem;
+        }
+    }
